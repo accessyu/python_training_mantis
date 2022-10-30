@@ -1,13 +1,23 @@
 {
   "web": {
-    "baseUrl": "http://localhost/addressbook/",
-    "username": "admin",
-    "password": "secret"
+    "baseUrl": "http://172.17.41.29/mantisbt-1.2.20/",
+    "editUrl": "http://172.17.41.29/mantisbt-1.2.20/manage_proj_create_page.php",
+    "projPageUrl": "http://172.17.41.29/mantisbt-1.2.20/manage_proj_page.php",
+    "soapUrl": "http://172.17.41.29/mantisbt-1.2.20/api/soap/mantisconnect.php?wsdl"
   },
-  "db": {
+  "webadmin": {
+    "username": "administrator",
+    "password": "root"
+  },
+  "ftp": {
+    "host": "172.17.41.29",
+    "username": "mantis",
+    "password": "mantis"
+  },
+  "james": {
     "host": "localhost",
-    "name": "addressbook",
-    "user": "root",
-    "password": ""
+    "port": 4555,
+    "username": "root",
+    "password": "root"
   }
 }
