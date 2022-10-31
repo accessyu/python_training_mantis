@@ -1,7 +1,6 @@
 from model.project import Project
 from selenium.webdriver.support.ui import Select
 
-
 class ProjectHelper:
 
     def __init__(self, app):
@@ -15,7 +14,6 @@ class ProjectHelper:
         self.fill_project_form(project)
         self.project_cache = None
 
-
     def delete_project(self, project):
         wd = self.app.wd
         self.app.open_project_list()
@@ -24,7 +22,6 @@ class ProjectHelper:
         wd.find_element_by_xpath("//input[@value='Delete Project']").click()
         wd.find_element_by_css_selector("input.button").click()
         self.project_cache = None
-
 
     def fill_project_form(self, project):
         wd = self.app.wd
@@ -37,7 +34,6 @@ class ProjectHelper:
         Select(wd.find_element_by_name('view_state')).select_by_visible_text(project.view_status)
         wd.find_element_by_name("description").send_keys(project.desc)
         wd.find_element_by_css_selector("input[value='Add Project']").submit()
-
 
 
     def get_project_list(self):
