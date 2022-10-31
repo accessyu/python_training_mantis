@@ -42,6 +42,7 @@ class Application:
                 len(wd.find_elements_by_css_selector("input[value='Add Project']")) > 0):
             wd.get(self.edit_url)
 
+
     def open_project_list(self):
         wd = self.wd
         if not (wd.current_url.endswith('/manage_proj_page.php') and

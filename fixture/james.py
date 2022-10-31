@@ -16,6 +16,7 @@ class JamesHelper:
             session.create_user(username, password)
         session.quit()
 
+
     class Session:
         def __init__(self, host, port, username, password):
             self.telnet = Telnet(host, port, 5)
