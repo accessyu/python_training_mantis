@@ -17,7 +17,6 @@ def load_config(file):
             target = json.load(active_file)
     return target
 
-
 @pytest.fixture
 def app(request, config):
     global fixture
@@ -58,7 +57,6 @@ def restore_server_config(host, username, password):
                 remote.remove('config_inc.php')
             remote.rename('config_inc.php.back', 'config_inc.php')
 
-
 @pytest.fixture(scope="session", autouse=True)
 def stop(request):
     def fin():
@@ -66,8 +64,6 @@ def stop(request):
         fixture.destroy()
     request.addfinalizer(fin)
     return fixture
-
-
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox")
